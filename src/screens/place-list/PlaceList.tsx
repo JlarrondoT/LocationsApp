@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { FlatList } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import PlaceItem from '../../components/molecules/PlaceItem.molecule';
-import placeActions from '../../store/actions/places.action';
+import PlacesAction from '../../store/actions/places.action';
 
 // @ts-ignore
 const PlaceList = ({ navigation }) => {
@@ -10,7 +10,7 @@ const PlaceList = ({ navigation }) => {
   const places = useSelector((state: any) => state.places.places);
 
   useEffect(() => {
-    dispatch(placeActions.loadPlace());
+    dispatch(PlacesAction.loadPlace());
   }, []);
 
   const onSelectDetail = () => {

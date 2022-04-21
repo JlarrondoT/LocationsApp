@@ -4,7 +4,7 @@ import { insertPlace, fetchPlaces } from '../../sqlite/sql.connection';
 
 const { ADD_PLACE, LOAD_PLACE } = PLACES_TYPES;
 
-export default {
+export const PlacesAction = {
   // @ts-ignore
   addPlace: (name, image, latitude, longitude) => {
     // @ts-ignore
@@ -49,3 +49,5 @@ export default {
     };
   },
 };
+
+export default PlacesAction;
