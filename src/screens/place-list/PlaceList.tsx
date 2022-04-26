@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { FlatList } from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch, connect } from 'react-redux';
 import PlaceItem from '../../components/molecules/PlaceItem.molecule';
 import PlacesAction from '../../store/actions/places.action';
 
@@ -31,4 +31,4 @@ const PlaceList = ({ navigation }) => {
   return <FlatList data={places} keyExtractor={(item) => item.id} renderItem={renderItem} />;
 };
 
-export default PlaceList;
+export default connect()(PlaceList);

@@ -5,15 +5,6 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  preview: {
-    width: '100%',
-    height: 200,
-    marginBottom: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderColor: COLORS.primaryColor,
-    borderWidth: 1,
-  },
   image: {
     width: '100%',
     height: '100%',
@@ -48,5 +39,18 @@ export const styles = StyleSheet.create({
   address: {
     color: COLORS.textColor,
     fontSize: 14,
+  },
+  preview: {
+    width: '100%',
+    height: 200,
+    marginBottom: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: COLORS.primaryColor,
+    borderWidth: 1,
+  },
+  action: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 });

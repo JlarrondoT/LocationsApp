@@ -8,10 +8,23 @@ import PlaceList from '../screens/place-list/PlaceList';
 import PlaceDetail from '../screens/place-detail/PlaceDetail';
 import NewPlace from '../screens/new-place/NewPlace.screen';
 import HeaderButton from '../components/atoms/HeaderButton';
+import { init } from '../sqlite/sql.connection';
 
 const mainStack = createNativeStackNavigator();
 
+const initDb = () => {
+  console.log('entre al init db de afuera');
+  init()
+    .then(() => {
+      console.log('DB initialized');
+    })
+    .catch((err) => {
+      console.log('DB initialization failed', err);
+    });
+};
+
 const MainStackNavigator = () => {
+  initDb();
   return (
     <mainStack.Navigator
       initialRouteName="Place"

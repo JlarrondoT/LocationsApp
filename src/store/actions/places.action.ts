@@ -34,11 +34,9 @@ export const PlacesAction = {
     };
   },
   loadPlace: () => {
-    console.log('----LOAD PLACE----');
     return async (dispatch: any) => {
       try {
         const result = await fetchPlaces();
-        console.log('resultado loadplace: ', result);
         dispatch({
           type: LOAD_PLACE,
           place: result,
